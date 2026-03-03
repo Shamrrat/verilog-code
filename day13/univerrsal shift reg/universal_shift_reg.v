@@ -10,7 +10,7 @@ always@(posedge clk) begin
                 case(mode)
                         2'b00 :shift_reg<={serial_in,shift_reg[3:1]};
                         2'b01 :shift_reg<=parallel_in;
-			2'b10 :begin serial_out<=shift_reg[0]; shift_reg <= {1'b0, shift_reg[3:1]}; end
+		            	2'b10 :begin serial_out<=shift_reg[0]; shift_reg <= {1'b0, shift_reg[3:1]}; end
                         2'b11 :parallel_out<=shift_reg;
                         default : shift_reg<=4'b0000;
                 endcase
