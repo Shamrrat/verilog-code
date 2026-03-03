@@ -7,13 +7,13 @@ always@(posedge clk or posedge reset) begin
 	end
         else begin
 		if(load)
-begin
-                        shift_reg<=parallel_in;
+             begin
+              shift_reg<=parallel_in;
 		        parallel_out<=shift_reg;
-		end
+		      end
                 else 
                         parallel_out<=shift_reg;
-        end
+               end
 
 end
 endmodule
